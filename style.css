@@ -1,0 +1,153 @@
+.button-rounded {
+    border-radius: 25px;
+    background-color: #f33629;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: .4s;
+    cursor: pointer;
+}
+.button-rounded:hover {
+    background-color: #524c4b;
+    color: #fff;
+}
+
+.button-subtle {
+    background-color: transparent;
+    border: 2px solid #008cba;
+    color: #008cba;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    text-decoration: .4s;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+.button-subtle:hover {
+    background-color: #008cba;
+    color: #fff;
+}
+
+.button-pulse {
+    border-radius: 50px;
+    background-color: #ff9800;
+    border: none;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-pulse:hover {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.button-shine {
+    border-radius: 8px;
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-shine::before {
+    content: '';
+    position:absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255,255,255,0.7);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0%{
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+}
+
+.button {
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
